@@ -1,0 +1,28 @@
+; $Id: acoffee.info,v 1.1 2010/09/12 12:57:12 stocker Exp $
+name = aCoffee
+description = Coffee Drupal theme by Template-Stock.com
+core = 6.x
+screenshot = acoffee_cover.png
+engine = phptemplate
+
+regions[right] = Right sidebar
+regions[content] = Content
+regions[header] = Header
+regions[footer] = Footer
+
+regions[topcontent] = Top Content
+regions[precontent] = Pre Content
+regions[contentleftbox] = Content Left Box
+regions[contentrightbox] = Content Right Box
+
+regions[topright] = Top Right
+
+regions[footerboxleft] = Footer Left Box
+regions[footerboxcenter] = Footer Center Box
+regions[footerboxright] = Footer Right Box
+; Information added by drupal.org packaging script on 2010-09-12
+version = "6.x-1.0"
+core = "6.x"
+project = "acoffee"
+datestamp = "1284300105"
+
