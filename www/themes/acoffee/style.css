@@ -13,7 +13,7 @@ html, body {
   padding: 0;
 }
 body {
-  background-color: #331400;
+  background-color: #d9ce42;
   font-family: "Lucida", "Lucida Grande", "Trebuchet MS", Tahoma, Verdana, sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -134,7 +134,7 @@ a:hover {
   z-index: 2;
 }
 #basement {
-  background-color: #733100;
+  background-color: #658600;
   border-top: #aa4800 solid 6px;
   margin: -50px 0 0;
   min-height: 50px;
