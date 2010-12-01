@@ -135,7 +135,7 @@ a:hover {
 }
 #basement {
   background-color: #658600;
-  border-top: #aa4800 solid 6px;
+  border-top: #7ca500 solid 6px;
   margin: -50px 0 0;
   min-height: 50px;
   padding: 20px 0 0 0;
@@ -297,6 +297,7 @@ ul.menu li {
   color: #CCC;
   font-size: 0.85em;
   padding: 20px 0;
+  text-align: right;
 }
 .item-list .pager {
   font-size: 1.143em;
