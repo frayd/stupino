@@ -140,6 +140,10 @@ a:hover {
   min-height: 50px;
   padding: 20px 0 0 0;
 }
+#primary {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 ul.primary-links li {
   display: block;
   font-family: Arial, Helvetica, Garuda, sans-serif;
@@ -149,6 +153,8 @@ ul.primary-links li {
   margin: 1px;
   padding: 0;
   text-transform: uppercase;
+  background-color: #658600;
+  border-left: 4px solid #7ca500;
 }
 ul.primary-links li a {
   color: #FFF;
@@ -161,14 +167,14 @@ ul.primary-links li a:hover {
 }
 ul.primary-links li.active-trail,
 ul.primary-links li:hover {
-  background-color: #AA4800;
-  border-right: 4px solid #733100;
+  background-color: #fff;
+  border-left: 4px solid #7ca500;
 }
 ul.primary-links li.active-trail a,
 ul.primary-links li:hover a,
 ul.secondary-links li.active-trail a,
 ul.secondary-links li:hover a {
-  color: #FFF;
+  color: #658600;
 }
 #secondary {
   background-color: #AA4800;
@@ -223,7 +229,7 @@ ul.secondary-links li:hover a{
 }
 #sidebar-right .block .content,
 .block h2 {
-  background-color: #733100;
+  background-color: #658600;
 }
 #sidebar-right .block-user .content,
 .block-user h2 {

@@ -72,6 +72,14 @@
 
         <div id="navigation" class="menu <?php if (!empty($primary_links)) { print "withprimary"; } if (!empty($secondary_links)) { print " withsecondary"; } ?> ">
           <?php if (!empty($topright)): ?><div id="topright"><?php print $topright; ?></div><?php endif; ?>
+		  
+          <?php if (!empty($rss_twit)): ?>
+            <div id="rss-twit">
+			  <a href="<?php print $front_page ?>" title="<?php print t('Home'); ?>" rel="home"><?php print theme('image', drupal_get_path('theme', 'acoffee') ."/img/home.png") ?></a>
+              <?php print $rss_twit; ?>
+            </div>
+          <?php endif; ?>
+		  
           <?php if (!empty($primary_links)): ?>
             <div id="primary" class="clear-block">
               <?php print theme('links', $primary_links, array('class' => 'links primary-links')); ?>
@@ -81,13 +89,6 @@
           <?php if (!empty($secondary_links)): ?>
             <div id="secondary" class="clear-block">
               <?php print theme('links', $secondary_links, array('class' => 'links secondary-links')); ?>
-            </div>
-          <?php endif; ?>
-
-          <?php if (!empty($rss_twit)): ?>
-            <div id="rss-twit">
-			  <a href="<?php print $front_page ?>" title="<?php print t('Home'); ?>" rel="home"><?php print theme('image', drupal_get_path('theme', 'acoffee') ."/img/home.png") ?></a>
-              <?php print $rss_twit; ?>
             </div>
           <?php endif; ?>
 
