@@ -57,7 +57,7 @@
               <div id="name-and-slogan">
                 <?php if (!empty($site_name)): ?>
                   <p id="site-name">
-                    <a href="<?php print $front_page ?>" title="<?php print t('Home'); ?>" rel="home"></a>
+                    <a href="<?php print $front_page ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_name ?></a>
                   </p>
                 <?php endif; ?>
 
@@ -75,7 +75,6 @@
 		  
           <?php if (!empty($rss_twit)): ?>
             <div id="rss-twit">
-			  <a href="<?php print $front_page ?>" title="<?php print t('Home'); ?>" rel="home"><?php print theme('image', drupal_get_path('theme', 'acoffee') ."/img/home.png") ?></a>
               <?php print $rss_twit; ?>
             </div>
           <?php endif; ?>
