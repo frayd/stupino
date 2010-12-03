@@ -103,6 +103,15 @@
     <div id="footer-wrapper">
       <div id="footer">
         <?php print 'designed by "Трололо studious" 2010' ?>
+        <?php if (!empty($footer)): print $footer; endif; ?>
+        <?php if (!empty($footerboxleft) || !empty($footerboxcenter) || !empty($footerboxr)): ?>
+          <div id="footer-boxes">
+            <div class="area"><?php if (!empty($footerboxleft)): print $footerboxleft; endif; ?></div>
+            <div class="area"><?php if (!empty($footerboxcenter)): print $footerboxcenter; endif; ?></div>
+            <div class="area"><?php if (!empty($footerboxright)): print $footerboxright; endif; ?></div>
+          </div>
+        <?php endif; ?>
+        <?php print $footer_message; ?>
       </div> <!-- /footer -->
     </div> <!-- /footer-wrapper -->
 
