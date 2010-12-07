@@ -87,6 +87,9 @@ a:hover {
   margin: 0 10px 8px 70px;
   padding: 0 0 6px 0;
 }
+#name-and-slogan  {
+  margin-top: 5px;
+}
 #name-and-slogan a {
   color: #7ca500;
   font-family: "Lucida", "Lucida Grande", "Trebuchet MS", "Tahoma", "Verdana", sans-serif;
@@ -143,18 +146,17 @@ a:hover {
 }
 #basement {
   background-color: #658600;
+  background-image: url('img/basement_bg.png');
   border-top: #7ca500 solid 6px;
   margin: -50px 0 0;
   min-height: 50px;
   padding: 20px 0 0 0;
 }
 #primary {
-  margin-top: 10px;
   margin-bottom: 10px;
-  margin-left: -25px;
   max-height: 50px;
   position: relative;
-  z-index: 1;
+  margin-bottom: 20px;
 }
 ul.primary-links li {
   display: block;
@@ -165,18 +167,21 @@ ul.primary-links li {
   margin: 1px;
   padding: 0;
   text-transform: uppercase;
+  text-align: center;
   background-color: transparent;
-  width: 162px;
+  float: left;
+  overflow: hidden;
+  width: 150px;
+  height: 30px;
   position: relative;
-  background-image: url("img/menu_bar_back.png");
+  background-image: url("img/menu_bar.png");
   background-repeat: no-repeat;
-  z-index: 1;
 }
 ul.primary-links li a {
   color: #b5a642;
   display: block;
   padding: 5px 10px;
-  width: 142px;
+  width: 130px;
 }
 ul.primary-links li a:hover {
   text-decoration: none;
@@ -185,7 +190,7 @@ ul.primary-links li.active-trail,
 ul.primary-links li:hover {
   background-color: transparent;
   position: relative;
-  background-image: url("img/menu_bar.png");
+  background-image: url("img/menu_bar_active.png");
   background-repeat: no-repeat;
   z-index: 4;
 }
@@ -594,10 +599,8 @@ tr.even {
 #rss-twit {
   text-align: center;
   position: relative;
+  margin-top: 10px;
   z-index: 1;
-}
-#rss-twit a {
-  margin: 0 4px;
 }
 .block-region {
   background-color: #FF803E;

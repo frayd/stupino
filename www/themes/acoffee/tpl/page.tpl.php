@@ -22,6 +22,11 @@
 
     <div id="container" class="clear-block">
       <div id="main" class="column"><div id="main-squeeze">
+          <?php if (!empty($primary_links)): ?>
+            <div id="primary" class="clear-block">
+              <?php print theme('links', $primary_links, array('class' => 'links primary-links')); ?>
+            </div>
+          <?php endif; ?>
         <?php if (!empty($breadcrumb)): ?><div id="breadcrumb"><?php print $breadcrumb; ?></div><?php endif; ?>
         <?php if (!empty($mission)): ?><div id="mission"><?php print $mission; ?></div><?php endif; ?>
 
@@ -79,11 +84,7 @@
             </div>
           <?php endif; ?>
 		  
-          <?php if (!empty($primary_links)): ?>
-            <div id="primary" class="clear-block">
-              <?php print theme('links', $primary_links, array('class' => 'links primary-links')); ?>
-            </div>
-          <?php endif; ?>
+
 
           <?php if (!empty($secondary_links)): ?>
             <div id="secondary" class="clear-block">
