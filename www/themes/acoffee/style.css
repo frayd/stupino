@@ -114,14 +114,14 @@ a:hover {
 #page {
   margin: 0 auto;
   padding: 0 20px;
-  width: 986px;
+  width: 1040px;
 }
 #container #main {
   background: transparent url('img/toper.png') no-repeat 0 0;
   float: left;
   margin: 20px 20px 0 0;
   padding: 0;
-  width: 686px;
+  width: 750px;
 }
 #container #main-squeeze {
   background: transparent url('img/bgnode.png') repeat-y 0 0;
@@ -135,7 +135,7 @@ a:hover {
   height: 40px;
   margin: 0 0 0 0;
   padding: 0;
-  width: 686px;
+  width: 750px;
 }
 #container .sidebar {
   float: left;
@@ -486,7 +486,8 @@ div.error {
   padding: 4px;
 }
 .node p {
-  margin: 0 0 14px 0;
+  margin: 0 14px 14px 0;
+  text-align: justify;
 }
 .node ul {
   color: #7CA500;
