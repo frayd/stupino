@@ -1,0 +1,3 @@
+In settings.php add following:
+
+$conf['cache_inc'] = 'PATH_TO_MODULE/cache.inc'; // ex. 'sites/all/modules/loginza/cache.inc'

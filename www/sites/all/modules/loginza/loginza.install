@@ -1,0 +1,43 @@
+<?php
+
+function loginza_install() {
+	variable_set('loginza_role', 'loginza user');
+  db_query("INSERT INTO {role} (name) VALUES('%s')", variable_get('loginza_role', 'loginza user'));
+  $rid = db_last_insert_id('role', 'rid');
+  variable_set('loginza_rid', $rid);
+  db_query("ALTER TABLE  {comments} ADD loginza TEXT NULL DEFAULT NULL");
+  variable_set('loginza_providers', array(
+    'yandex.ru' => 'yandex.png',
+    'ya.ru' => 'yandex.png',
+    'vkontakte.ru' => 'vkontakte.png',
+    'vk.com' => 'vkontakte.png',
+    'loginza.ru' => 'loginza.png',
+    'myopenid.com' => 'myopenid.png',
+    'livejournal.com' => 'livejournal.png',
+    'google.ru' => 'google.png',
+    'google.com' => 'google.png',
+    'flickr.com' => 'flickr.png',
+    'mail.ru' => 'mailru.png',
+    'rambler.ru' => 'rambler.png',
+    'webmoney.ru' => 'webmoney.png',
+    'webmoney.com' => 'webmoney.png',
+    'wmkeeper.com' => 'webmoney.png',
+    'wordpress.com' => 'wordpress.png',
+    'blogspot.com' => 'blogger.png',
+    'diary.ru' => 'diary',
+    'bestpersons.ru' => 'bestpersons.png',
+    'facebook.com' => 'facebook.png'
+  ));
+
+}
+function loginza_uninstall() {
+  db_query("DELETE FROM {role} WHERE rid = %d", variable_get('loginza_rid', NULL));
+  db_query("ALTER TABLE  {comments} DROP  loginza");
+  variable_del('loginza_rid');
+  variable_del('loginza_role');
+  variable_del('loginza_providers');
+  variable_del('loginza_picture_icon');
+  variable_del('loginza_name_icon');
+}
+
+

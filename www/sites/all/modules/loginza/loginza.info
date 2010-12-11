@@ -1,0 +1,6 @@
+;
+name = "Loginza"
+description = Allows users to login via Loginza.ru
+package = "OpenId"
+core = 6.x
+version = 6.x-1.0

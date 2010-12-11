@@ -1,0 +1,313 @@
+<?php 
+
+function loginza_menu() {
+  $items = array();
+  $items['loginza'] = array(
+    'title' => 'Loginza Auth',
+    'page callback' => 'loginza_auth',
+    'access arguments' => array('access content'),
+    'type'        => MENU_CALLBACK,
+    'file'        => 'loginza.auth.inc',
+  );
+  $items['admin/settings/loginza'] = array(
+    'title' => 'Loginza Settings',
+    'page callback'    => 'drupal_get_form',
+    'page arguments'   => array('loginza_settings'),
+    'access arguments' => array('administer site configuration'),
+    'file' => 'loginza.admin.inc',
+    'type' => MENU_NORMAL_ITEM,
+  );
+  return $items;
+}
+
+function loginza_menu_alter(&$items) {
+	$items['logout']['page callback']   = 'loginza_logout';
+	$items['logout']['access callback'] = 'loginza_is_logged_in';
+	$items['logout']['module']          = 'loginza';
+	$items['logout']['file']            = 'loginza.auth.inc';
+	
+}
+
+function loginza_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'user_login_block') {
+    if (loginza_is_logged_in()) {
+      $form['#access'] = FALSE;
+    }
+    else {
+      $link = url('loginza', array('absolute' => TRUE, 'query' => array('destination' => $_GET['q'])));
+      $link =  urlencode($link);
+      $links = array();
+      $links[] = array(
+        'data' => l(t('Login via OpenId'), 'https://loginza.ru/api/widget?token_url=' . $link, array('absolute' => TRUE, 'attributes' => array('class' => 'loginza'))),
+      );
+	    $form['loginza'] = array(
+	      '#value' => theme('item_list', $links),
+	    );
+    }
+  }
+  elseif ($form_id == 'user_login') {
+    global $user;
+    if (isset($user->loginza)) {
+      drupal_set_message(t('%username, you have already signed up using %provider. You can !register to get full functionality',
+            array(
+              '%username' => $user->name,
+              '%provider' => current(array_keys(loginza_get_identity_name($user->loginza['identity']))),
+              '!register' => l(t('register'), 'user/register'),
+            )));
+    }
+    else {
+      $link = url('loginza', array('absolute' => TRUE, 'query' => array('destination' => $_GET['q'])));
+      $link =  urlencode($link);
+      $link = l(theme('loginza_icon'),'https://loginza.ru/api/widget?token_url=' . $link, array('absolute' => TRUE, 'html' => TRUE, 'attributes' => array('class' => 'loginza')));
+      $form['loginza'] = array(
+        '#value' => '<div class="loginza-form"><b>' . t('Login using:') . ' </b>'
+          . $link  . '</div>',
+      );
+    }
+  }
+}
+
+function loginza_theme() {
+    return array(
+        'loginza_icon' => array(
+            'arguments' => array('icon' => NULL),
+        ),
+    );
+}
+
+
+function loginza_init() {
+  drupal_set_html_head('<script type="text/javascript" src="http://loginza.ru/js/widget.js"></script>');
+	global $user;
+	$rid = variable_get('loginza_rid', NULL);
+	if (!empty($rid) && isset($_SESSION['loginza'])) {
+		
+    $role = variable_get('loginza_role', 'loginza user');
+    if (isset($user->roles[DRUPAL_ANONYMOUS_RID])) {
+      $user->roles[$rid] = $role;
+      $user->loginza = $_SESSION['loginza'];
+      $user->name    = isset($user->loginza['name']['full_name']) ? check_plain($user->loginza['name']['full_name']) : check_plain(implode(' ', $user->loginza['name']));
+      $user->login   = $user->loginza['login'];
+      if ($user->loginza['photo']) {
+        $user->picture = $user->loginza['photo'];
+      }
+      user_access(NULL, NULL, TRUE); // Reset static cache
+    }
+	}
+}
+
+function loginza_is_logged_in() {
+  return user_is_logged_in() || isset($_SESSION['loginza']);
+}
+
+function loginza_comment(&$comment, $op) {
+	if ($op == 'insert') {
+		global $user;
+		if (isset($user->loginza)) {
+		  db_query("UPDATE {comments} SET loginza = '%s' WHERE cid = %d", serialize($user->loginza), $comment['cid']);
+		}
+	}
+}
+
+function loginza_get_provider_ico($identity) {
+  if ($icon = loginza_get_identity_name($identity)) {
+    $icon = current($icon);
+    $src = drupal_get_path('module', 'loginza') . '/img/' . $icon;
+    return   theme('image', $src, 'OpenID',  'OpenID', array(
+      'align' => $provider_key,
+      'class' => 'loginza-provider-icon',
+    ));
+  }
+}
+
+function loginza_get_identity_name($identity) {
+  $providers = variable_get('loginza_providers', NULL);
+  $matches = array();
+  if (preg_match('/^https?:\/\/([^\.]+\.)?([a-z0-9\-\.]+\.[a-z]{2,5})/i', $identity, $matches)) {
+    $provider_key = $matches[2];
+    if (array_key_exists($provider_key, $providers)) {
+      return array(
+        $provider_key => $providers[$provider_key]
+      );
+    }
+  }
+  return FALSE;
+}
+
+function loginza_get_comment_info($comment) {
+  static $comments;
+  $cid = is_numeric($comment) ? $comment : (is_array($comment) ? $comment['cid'] : $comment->cid);
+  if (isset($comments[$cid])) {
+    return $comments[$cid];
+  }
+  $data = db_result(db_query('SELECT loginza FROM {comments} WHERE cid = %d', $cid));
+  $comments[$cid] = $data ? unserialize($data) : FALSE;
+  return $comments[$cid];
+}
+
+/**
+ * Theme of provider icon, or list providers icons
+ * @return string
+ */
+function theme_loginza_icon($icon = NULL) {
+  $providers = variable_get('loginza_providers', NULL);
+  $dir = drupal_get_path('module', 'loginza') . '/img/';
+  $output = '';
+  if (empty($icon)) {
+    $providers = array_unique($providers);
+    foreach ($providers as $provider => $img) {
+      $output .= '<span class="loginza-provider-icon-wrapper">' . theme('image', $dir . $img, 
+      t('Login via !provider', array(
+                              '!provider' => $provider)),
+      t('Login via !provider', array(
+                              '!provider' => $provider)),
+      array('class' => 'loginza-provider-icon')
+      ) . '</span>';
+    }
+  }
+  elseif (isset($providers[$icon])) {
+    $img = $providers[$icon];
+    $provider = $icon;
+    $output .= '<span class="loginza-provider-icon-wrapper">' . theme('image', $dir . $img, 
+      t('Login via !provider', array(
+                              '!provider' => $provider)),
+      t('Login via !provider', array(
+                              '!provider' => $provider)),
+      array('class' => 'loginza-provider-icon')
+      ) . '</span>';
+  }
+  return $output;
+} 
+
+/*
+ *  Implementations of theme hooks
+ * 
+ */
+
+function loginza_preprocess_block(&$variables) {
+  $block = &$variables['block'];
+  if ($block->module == 'user' && $block->delta === '1') {
+   $block->subject = loginza_is_logged_in() ? $GLOBALS['user']->name : t('Navigation');
+   $loginza = $GLOBALS['user']->loginza ? $GLOBALS['user']->loginza : NULL;
+   if (!empty($loginza)) {
+     $provider = current(array_keys(loginza_get_identity_name($loginza['identity'])));
+     $provider = t('Logged in via !provider', array('!provider' => $provider));
+     $info = "
+       <div class='loginza-info'>
+         <em>$provider</em>
+       </div>
+     ";
+     $block->content = $info . $block->content;
+   }
+  }
+}
+
+function phptemplate_comment_post_forbidden($node) {
+  global $user;
+  static $authenticated_post_comments;
+  if (!user_access('post comments')) {
+  }
+  if (!$user->uid) {
+    if (!isset($authenticated_post_comments)) {
+      // We only output any link if we are certain, that users get permission
+      // to post comments by logging in. We also locally cache this information.
+      $authenticated_post_comments = array_key_exists(DRUPAL_AUTHENTICATED_RID, user_roles(TRUE, 'post comments') + user_roles(TRUE, 'post comments without approval'));
+    }
+
+    if ($authenticated_post_comments) {
+      // We cannot use drupal_get_destination() because these links
+      // sometimes appear on /node and taxonomy listing pages.
+      if (variable_get('comment_form_location_'. $node->type, COMMENT_FORM_SEPARATE_PAGE) == COMMENT_FORM_SEPARATE_PAGE) {
+        $destination = 'destination='. rawurlencode("comment/reply/$node->nid#comment-form");
+      }
+      else {
+        $destination = 'destination='. rawurlencode("node/$node->nid#comment-form");
+      }
+      $loginza = '';
+      if (!$user->loginza) {
+        $link = url('loginza', array('absolute' => TRUE, 'query' => array('destination' => $_GET['q'])));
+        $link =  urlencode($link);
+        $loginza = '<div class="loginza-form"><b>' . t('Login using:') . ' </b>
+            <a href="https://loginza.ru/api/widget?token_url=' . $link . '" class="loginza">' . 
+          theme('loginza_icon') . '</a></div>';
+      }
+
+      if (variable_get('user_register', 1)) {
+        // Users can register themselves.
+        return t('<a href="@login">Login</a> or <a href="@register">register</a> to post comments', array('@login' => url('user/login', array('query' => $destination)), '@register' => url('user/register', array('query' => $destination)))) . $loginza;
+      }
+      else {
+        // Only admins can add new users, no public registration.
+        return t('<a href="@login">Login</a> to post comments', array('@login' => url('user/login', array('query' => $destination)))) . $loginza;
+      }
+    }
+  }
+ 
+}
+function phptemplate_username($object) {
+  
+  if ($object->uid && $object->name) {
+    
+    // Shorten the name when it is too long or it will break many tables.
+    if (drupal_strlen($object->name) > 20) {
+      $name = drupal_substr($object->name, 0, 15) .'...';
+    }
+    else {
+      $name = $object->name;
+    }
+
+    if (user_access('access user profiles')) {
+      $output = l($name, 'user/'. $object->uid, array('attributes' => array('title' => t('View user profile.'))));
+    }
+    else {
+      $output = check_plain($name);
+    }
+  }
+  else if ($object->name) {
+    $object->loginza = loginza_get_comment_info($object->cid);
+    if ($object->loginza['identity']) {
+      $object->homepage = $object->loginza['identity'];
+    }
+    // Sometimes modules display content composed by people who are
+    // not registered members of the site (e.g. mailing list or news
+    // aggregator modules). This clause enables modules to display
+    // the true author of the content.
+    if (!empty($object->homepage)) {
+      $output = l($object->name, $object->homepage, array('attributes' => array('rel' => 'nofollow')));
+    }
+    else {
+      $output = check_plain($object->name);
+    }
+    
+    if ($object->loginza && !variable_get('loginza_name_icon', FALSE)) {
+      $provider = loginza_get_identity_name($object->loginza['identity']);
+      $provider = current(array_keys($provider));
+      $output .= " <em>(via $provider)</em>";
+    }
+    else {
+     $output .= ' ('. t('not verified') .')';
+    }
+  }
+  else {
+    $output = check_plain(variable_get('anonymous', t('Anonymous')));
+  }
+  if ($object->loginza && variable_get('loginza_name_icon', FALSE)) {
+    $output = loginza_get_provider_ico($object->loginza['identity']) . $output;
+  }
+  return $output;
+}
+
+function loginza_preprocess_user_picture(&$variables) {
+  $account = $variables['account'];
+  if (($loginza = $account->loginza) && $account->loginza['photo']) {
+     $path = $loginza['photo'];
+     $url = (url($path) == $path) ? $path : (base_path() . $path);
+     $photo = '<img src="'. check_url($url) .'" alt="'. t('View user profile.') .'" title="'. t('View user profile.') .'" />';
+     $profile = $loginza['identity'];
+     $attributes = array('attributes' => array('title' => t('View user profile.')), 'html' => TRUE, 'absolute' => TRUE);
+     $variables['picture'] = l($photo, $profile, $attributes);
+     if (variable_get('loginza_picture_icon', FALSE)) {
+      $variables['picture'] .= loginza_get_provider_ico($loginza['identity']);
+     }
+  }
+}
