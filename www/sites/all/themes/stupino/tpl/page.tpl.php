@@ -85,7 +85,6 @@
           <?php endif; ?>
 		  
 
-
           <?php if (!empty($secondary_links)): ?>
             <div id="secondary" class="clear-block">
               <?php print theme('links', $secondary_links, array('class' => 'links secondary-links')); ?>
@@ -94,7 +93,10 @@
 
         </div> <!-- /navigation -->
 
+		<?php if (!empty($right)) print '<div id="main-block"><div id="main-block_inside">' ?>
       <?php if (!empty($right)) print $right; ?>
+		<?php if (!empty($right)) print '</div></div>' ?>
+
       </div> <!-- /sidebar-right -->
 
     </div> <!-- /container -->

@@ -1,9 +1,7 @@
-<?php
-// $Id: theme-settings.php,v 1.1 2010/08/31 13:54:07 stocker Exp $
-
+﻿<?php
 /**
  * @file
- * aCoffee Theme Settings
+ * Stupino Theme Settings
  */
 
 /**
