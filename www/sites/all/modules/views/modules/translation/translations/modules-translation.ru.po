@@ -1,0 +1,24 @@
+# Russian translation of views (6.x-2.11)
+# Copyright (c) 2010 by the Russian translation team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: views (6.x-2.11)\n"
+"POT-Creation-Date: 2010-12-13 17:16+0000\n"
+"PO-Revision-Date: 2009-09-02 09:51+0000\n"
+"Language-Team: Russian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((((n%10)==1)&&((n%100)!=11))?(0):(((((n%10)>=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2));\n"
+
+msgid "Default language"
+msgstr "Язык по умолчанию"
+msgid "Current language"
+msgstr "Текущий язык"
+msgid "Translation option"
+msgstr "Опции перевода"
+msgid "Include untranslated nodes"
+msgstr "Включить не переведённые материалы"
+msgid "translate"
+msgstr "перевести"
