@@ -1,0 +1,184 @@
+# $Id: sv.po,v 1.1.2.1 2009/03/14 04:16:34 michellec Exp $
+#
+# Swedish translation of Author Pane
+# Generated from files:
+#  author-pane.tpl.php,v 1.1.2.11 2009/03/05 04:46:25 michellec
+#  author_pane.module,v 1.1.2.11 2009/03/05 03:27:27 michellec
+#  author_pane.info,v 1.1.2.5 2009/03/05 03:27:27 michellec
+#  author_pane.inc,v 1.1.2.4 2009/01/24 06:00:22 michellec
+#  contact.author-pane.inc,v 1.1.2.1 2009/01/05 04:38:06 michellec
+#  og.author-pane.inc,v 1.1.2.2 2009/01/05 04:38:06 michellec
+#  privatemsg.author-pane.inc,v 1.1.2.1 2009/01/05 04:38:06 michellec
+#  troll.author-pane.inc,v 1.1.2.1 2009/03/04 23:19:31 michellec
+#  user_relationships_api.author-pane.inc,v 1.1.2.4 2009/01/05 04:38:06 michellec
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Author Pane 6.x\n"
+"POT-Creation-Date: 2009-03-13 21:21+0100\n"
+"PO-Revision-Date: 2009-03-13 22:00+0100\n"
+"Last-Translator: Magnus Gunnarsson <seals@passagen.se>\n"
+"Language-Team: drupalsverige.se\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Poedit-Language: Swedish\n"
+"X-Poedit-Country: SWEDEN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: author-pane.tpl.php:87
+msgid "Title"
+msgstr "Titel"
+
+#: author-pane.tpl.php:104
+msgid "Joined"
+msgstr "Medlem"
+
+#: author-pane.tpl.php:110
+msgid "Posts"
+msgstr "Inlägg"
+
+#: author-pane.tpl.php:116
+msgid "!Points"
+msgstr "!Points"
+
+#: author-pane.tpl.php:122
+msgid "Groups"
+msgstr "Grupper"
+
+#: author-pane.tpl.php:130
+msgid "IP"
+msgstr "IP"
+
+#: author_pane.module:32
+#: author_pane.info:0
+#: panels_content_types/author_pane.inc:14;32
+msgid "Author Pane"
+msgstr "Author Pane"
+
+#: author_pane.module:39
+#: panels_content_types/author_pane.inc:85
+msgid "Template file"
+msgstr "Filmall"
+
+#: author_pane.module:40
+msgid "Template file to use. Do not include .tpl.php. Leave blank to use default."
+msgstr "Filmall som ska användas. Lägg inte till .tpl.php. Lämnas blankt för att använda standard."
+
+#: author_pane.module:46
+msgid "Image path"
+msgstr "Bildsökväg"
+
+#: author_pane.module:47
+msgid "Path to author pane images.  Leave blank to use default."
+msgstr "Sökväg till bilder för Author Pane. Lämnas blankt för att använda standard."
+
+#: author_pane.module:59
+msgid "Node types to display on"
+msgstr "Typer av noder att visas på"
+
+#: author_pane.module:75
+msgid "Author Information"
+msgstr "Författarens information"
+
+#: author_pane.module:167;167
+msgid "User is online"
+msgstr "Användaren är uppkopplad"
+
+#: author_pane.module:168
+msgid "Online"
+msgstr "Uppkopplad"
+
+#: author_pane.module:171;171
+msgid "User offline. Last seen @time ago."
+msgstr "Användaren nedkopplad. Senast sedd för @time sedan."
+
+#: author_pane.module:172
+msgid "Offline"
+msgstr "Nedkopplad"
+
+#: author_pane.module:0
+msgid "author_pane"
+msgstr "author_pane"
+
+#: author_pane.info:0
+msgid "Gathers information from user related contrib modules into one template."
+msgstr "Samlar information från bifogade användarmoduler till en mall."
+
+#: modules/contact.author-pane.inc:20;20;23
+msgid "Contact user"
+msgstr "Kontakta användaren"
+
+#: modules/og.author-pane.inc:24
+msgid "None"
+msgstr "Ingen"
+
+#: modules/privatemsg.author-pane.inc:21;21
+msgid "Send private message"
+msgstr "Skicka privat meddelande"
+
+#: modules/privatemsg.author-pane.inc:25
+msgid "Send PM"
+msgstr "Skicka PM"
+
+#: modules/troll.author-pane.inc:17
+msgid "Ban IP"
+msgstr "Bannlys IP"
+
+#: modules/user_relationships_api.author-pane.inc:34
+msgid "Remove from @rel_plural_name"
+msgstr "Ta bort från @rel_plural_name"
+
+#: modules/user_relationships_api.author-pane.inc:49
+msgid "Remove @name from @rel_plural_name"
+msgstr "Ta bort @name från @rel_plural_name"
+
+#: modules/user_relationships_api.author-pane.inc:61
+msgid "Add @rel_name"
+msgstr "Lägg till @rel_name"
+
+#: modules/user_relationships_api.author-pane.inc:76
+msgid "Add @name as a @rel_name"
+msgstr "Lägg till @name som @rel_name"
+
+#: modules/user_relationships_api.author-pane.inc:82
+msgid "Become @name's @rel_name"
+msgstr "Bli @rel_name till @name"
+
+#: modules/user_relationships_api.author-pane.inc:104
+msgid "+%rel_name"
+msgstr "+%rel_name"
+
+#: modules/user_relationships_api.author-pane.inc:110
+msgid "Become %name's %rel_name"
+msgstr "Bli %rel_name till %name"
+
+#: panels_content_types/author_pane.inc:35
+msgid "Author related variables gathered from helper modules."
+msgstr "Relaterade variabler till författaren samlade från hjälpmoduler."
+
+#: panels_content_types/author_pane.inc:36
+msgid "User"
+msgstr "Användare"
+
+#: panels_content_types/author_pane.inc:37
+msgid "Advanced Profile Kit"
+msgstr "Advanced Profile Kit"
+
+#: panels_content_types/author_pane.inc:61
+msgid "\"@s\" author pane"
+msgstr "\"@s\" Author Pane"
+
+#: panels_content_types/author_pane.inc:75
+msgid "Image directory"
+msgstr "Bildkatalog"
+
+#: panels_content_types/author_pane.inc:77
+msgid "Full path to image directory, not including leading or trailing slashes. Use [theme_path] to substitute the active theme's path. If left blank the images in the module directory will be used."
+msgstr "Fullständig sökväg till bildkatalogen, ska ej innehålla inledande eller avslutande snedstreck. Använd [theme_path] för att ersätta det aktiva temats sökväg. Om detta lämnas blankt kommer bilderna i modulens katalog att användas."
+
+#: panels_content_types/author_pane.inc:87
+msgid "Template file to use for the author pane."
+msgstr "Filmall som ska användas för Author Pane."
+

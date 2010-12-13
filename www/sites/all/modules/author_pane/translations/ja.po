@@ -1,0 +1,195 @@
+# $Id: ja.po,v 1.1.2.1 2009/04/12 11:06:09 imagine Exp $
+# -----------------------------------------------------------------------------
+# Japanese translation of Drupal (modules-author_pane)
+#
+# Copyright (c)      2009  Drupal Japan  ( http://drupal.jp/ )  /
+#                          Takafumi      ( jp.drupal@imagine **reverse order**)
+#
+# Generated from file:
+#  author-pane-block.tpl.php,v 1.1.4.3 2009/03/30 15:33:27 michellec
+#  author-pane.tpl.php,v 1.1.2.13 2009/03/30 15:33:27 michellec
+#  author_pane.module,v 1.1.2.12 2009/03/22 04:02:22 michellec
+#  author_pane.info,v 1.1.2.5 2009/03/05 03:27:27 michellec
+#  author_pane.inc,v 1.1.2.4 2009/01/24 06:00:22 michellec
+#  contact.author-pane.inc,v 1.1.2.1 2009/01/05 04:38:06 michellec
+#  og.author-pane.inc,v 1.1.2.2 2009/01/05 04:38:06 michellec
+#  privatemsg.author-pane.inc,v 1.1.2.1 2009/01/05 04:38:06 michellec
+#  troll.author-pane.inc,v 1.1.2.1 2009/03/04 23:19:31 michellec
+#  user_relationships_api.author-pane.inc,v 1.1.2.5 2009/03/31 15:16:16 michellec
+#
+# -----------------------------------------------------------------------------
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2009-04-12 16:31+0900\n"
+"Last-Translator: Takafumi <jp.drupal@imagine **reverse order**>\n"
+"Language-Team: Drupal Japan\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: author-pane-block.tpl.php:46 author-pane.tpl.php:101
+msgid "Joined"
+msgstr "登録日"
+
+#: author-pane-block.tpl.php:52 author-pane.tpl.php:107
+msgid "Posts"
+msgstr "投稿"
+
+#: author-pane-block.tpl.php:58 author-pane.tpl.php:113
+msgid "!Points"
+msgstr "!Points"
+
+#: author-pane-block.tpl.php:64 author-pane.tpl.php:119
+msgid "Groups"
+msgstr "グループ"
+
+#: author-pane-block.tpl.php:72 author-pane.tpl.php:127
+msgid "IP"
+msgstr "IP"
+
+#: author_pane.module:38 author_pane.info:0 panels_content_types/author_pane.inc:14;32
+msgid "Author Pane"
+msgstr "オーサーペイン"
+
+#: author_pane.module:47 panels_content_types/author_pane.inc:85
+msgid "Template file"
+msgstr "テンプレートファイル"
+
+#: author_pane.module:48
+msgid "Template file to use. Do not include .tpl.php. Default is author-pane-block."
+msgstr "使用するテンプレートファイルを入力します（.tpl.php は含めないこと）。 デフォルトは author-pane-block です。"
+
+#: author_pane.module:55
+msgid "Image path"
+msgstr "イメージパス"
+
+#: author_pane.module:56
+msgid "Path to author pane images.  Leave blank to use default."
+msgstr "オーサーペインイメージのパスを入力します。 デフォルトを使用する場合は空欄にします。"
+
+#: author_pane.module:69
+msgid "Node types to display on"
+msgstr "表示するノードタイプ"
+
+#: author_pane.module:84
+msgid "User picture preset"
+msgstr "ユーザアバターのプリセット"
+
+#: author_pane.module:86
+msgid "Imagecache preset to use for the user picture on this block. Leave blank to not use this feature."
+msgstr "このブロックのユーザアバターで使用するImagecacheプリセットを指定します。 この機能を使用しない場合は空欄にします。"
+
+#: author_pane.module:103
+msgid "Author Information"
+msgstr "投稿者情報"
+
+#: author_pane.module:205;205
+msgid "User is online"
+msgstr "ユーザはオンラインです"
+
+#: author_pane.module:206
+msgid "Online"
+msgstr "オンライン"
+
+#: author_pane.module:209;209
+msgid "User offline. Last seen @time ago."
+msgstr "ユーザはオフラインです。 最終オンラインは@time前です。"
+
+#: author_pane.module:210
+msgid "Offline"
+msgstr "オフライン"
+
+#: author_pane.module:281
+msgid "@user's picture"
+msgstr "@userさんのユーザアバター"
+
+#: author_pane.module:295
+msgid "View user profile."
+msgstr "ユーザプロフィールの表示"
+
+#: author_pane.module:0
+msgid "author_pane"
+msgstr "author_pane"
+
+#: author_pane.info:0
+msgid "Gathers information from user related contrib modules into one template."
+msgstr "ユーザ関連のコントリビュートモジュールからの情報を1つのテンプレートに集積します。"
+
+#: modules/contact.author-pane.inc:20;20;23
+msgid "Contact user"
+msgstr "ユーザにコンタクト"
+
+#: modules/og.author-pane.inc:24
+msgid "None"
+msgstr "なし"
+
+#: modules/privatemsg.author-pane.inc:21;21
+msgid "Send private message"
+msgstr "プライベートメッセージを送信"
+
+#: modules/privatemsg.author-pane.inc:25
+msgid "Send PM"
+msgstr "PM送信"
+
+#: modules/troll.author-pane.inc:17
+msgid "Ban IP"
+msgstr "IPをアクセス禁止"
+
+#: modules/user_relationships_api.author-pane.inc:34
+msgid "Remove from @rel_plural_name"
+msgstr "@rel_plural_nameから削除"
+
+#: modules/user_relationships_api.author-pane.inc:49
+msgid "Remove @name from @rel_plural_name"
+msgstr "@nameさんを@rel_plural_nameから削除"
+
+#: modules/user_relationships_api.author-pane.inc:61
+msgid "Add @rel_name"
+msgstr "@rel_nameに追加"
+
+#: modules/user_relationships_api.author-pane.inc:76
+msgid "Add @name as a @rel_name"
+msgstr "@nameさんを@rel_nameとして追加"
+
+#: modules/user_relationships_api.author-pane.inc:82
+msgid "Become @name's @rel_name"
+msgstr "@nameさんの@rel_nameになる"
+
+#: modules/user_relationships_api.author-pane.inc:104
+msgid "+%rel_name"
+msgstr "+%rel_name"
+
+#: modules/user_relationships_api.author-pane.inc:110
+msgid "Become %name's %rel_name"
+msgstr "%nameさんの%rel_nameになる"
+
+# コンテキストが不明のため、間違っている可能性あり
+#: panels_content_types/author_pane.inc:35
+msgid "Author related variables gathered from helper modules."
+msgstr "著者関連の変数がヘルパーモジュールから集積される。"
+
+#: panels_content_types/author_pane.inc:36
+msgid "User"
+msgstr "ユーザ"
+
+#: panels_content_types/author_pane.inc:37
+msgid "Advanced Profile Kit"
+msgstr "拡張プロフィールキット"
+
+#: panels_content_types/author_pane.inc:61
+msgid "\"@s\" author pane"
+msgstr "\"@s\" オーサーペイン"
+
+#: panels_content_types/author_pane.inc:75
+msgid "Image directory"
+msgstr "イメージディレクトリ"
+
+#: panels_content_types/author_pane.inc:77
+msgid "Full path to image directory, not including leading or trailing slashes. Use [theme_path] to substitute the active theme's path. If left blank the images in the module directory will be used."
+msgstr "イメージディレクトリへのフルパスを、先頭と末尾のスラッシュを含めずに入力します。 適用されているテーマのパスで代用する場合は [theme_path] を使用します。 空欄の場合は、モジュールディレクトリのイメージが使用されます。"
+
+#: panels_content_types/author_pane.inc:87
+msgid "Template file to use for the author pane."
+msgstr "オーサーペインに使用するテンプレートファイルです。"
+
