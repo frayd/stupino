@@ -265,18 +265,15 @@ ul.secondary-links li:hover a{
 #sidebar-right .block .content {
   background-image: url("img/bg.png");
   border: 6px solid #658600;
+  padding: 15px;
 }
 #sidebar-right .block-user .content {
   background-image: url("img/bg.png");
   border: 6px solid #658600;
-
 }
 #sidebar-right .block-user h2 {
   border-bottom: 3px solid #7CA500;
   background-color: #658600;
-}
-#sidebar-right .block .content {
-  padding: 15px;
 }
 #sidebar-right .block li a {
   color: #FFF;

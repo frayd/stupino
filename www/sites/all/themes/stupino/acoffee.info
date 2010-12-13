@@ -1,8 +1,7 @@
-﻿; $Id: stupino.info,v 1.1 2010/09/12 12:57:12 stocker Exp $
-name = Stupino
+﻿name = Stupino
 description = Stupino Drupal theme
+version = "6.x-1.1"
 core = 6.x
-screenshot = screenshot.png
 engine = phptemplate
 
 regions[right] = Right sidebar
@@ -20,9 +19,3 @@ regions[topright] = Top Right
 regions[footerboxleft] = Footer Left Box
 regions[footerboxcenter] = Footer Center Box
 regions[footerboxright] = Footer Right Box
-
-version = "6.x-1.0"
-core = "6.x"
-project = "Stupino"
-datestamp = "1284300105"
-

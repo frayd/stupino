@@ -105,7 +105,7 @@
 
     <div id="footer-wrapper">
       <div id="footer">
-        <?php print 'designed by "Трололо studious" 2010' ?>
+        <p>designed by "Трололо studious" 2010</p>
         <?php if (!empty($footer)): print $footer; endif; ?>
         <?php if (!empty($footerboxleft) || !empty($footerboxcenter) || !empty($footerboxr)): ?>
           <div id="footer-boxes">
@@ -115,8 +115,8 @@
           </div>
         <?php endif; ?>
         <?php print $footer_message; ?>
-      </div> <!-- /footer -->
-    </div> <!-- /footer-wrapper -->
+      </div>
+    </div>
 
     <?php print $closure; ?>
 
