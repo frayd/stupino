@@ -635,7 +635,23 @@ tr.even {
 #footer a {
   color: #FFFFFF;
 }
+.location-locations-header {
+  color: #658600;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 14px;
+  padding-left: 7px;
+  border-left-color: #aa4800;
+  border-left-style: dotted;
+  border-left-width: 2px;
 
+}
+.location-locations-wrapper {
+  margin-bottom: 10px;
+  padding-left: 7px;
+  border-left-color: #aa4800;
+  border-left-style: dotted;
+  border-left-width: 2px;
+}
 .in-maintenance #content-content {
   margin: 40px 0 30px 70px;
 }
