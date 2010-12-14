@@ -451,6 +451,15 @@ div.error {
   border: none;
   border-left: 4px solid #EB0101;
 }
+.comments-header {
+  color: #658600;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 14px;
+  border-top-color: #aa4800;
+  border-top-style: dotted;
+  border-top-width: 1px;
+  padding-top: 5px;
+}
 #comments, .box {
   margin: 0 0 0 70px;
 }
@@ -460,6 +469,7 @@ div.error {
 .comment {
   border-top: 1px dotted #AA4800;
   margin: 0 0 20px 0;
+  background-color: #ffefd5;
 }
 .comment .submitted {
   margin: 8px 0 0 0;
@@ -470,6 +480,9 @@ div.error {
 .comment .links {
   border-left: 4px solid #AA4800;
 }
+/*.indented { /ответ на комментарий/
+  background-color: #f5deb3;
+}*/
 .new {
   color: #FF6C00;
 }
@@ -635,15 +648,10 @@ tr.even {
 #footer a {
   color: #FFFFFF;
 }
-.location-locations-header {
+.location-locations-header { /* местоположение (над контейнером <p>) */
   color: #658600;
   font-family: "Trebuchet MS", sans-serif;
   font-size: 14px;
-  padding-left: 7px;
-  border-left-color: #aa4800;
-  border-left-style: dotted;
-  border-left-width: 2px;
-
 }
 .location-locations-wrapper {
   margin-bottom: 10px;

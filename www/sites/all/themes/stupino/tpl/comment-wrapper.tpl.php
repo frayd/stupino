@@ -7,6 +7,6 @@
  */
 ?>
 <div id="comments">
-  <h3><?php print t('Comments'); ?></h3>
+  <h3 class="comments-header"><?php print t('Comments'); ?></h3>
   <?php print $content; ?>
 </div>
