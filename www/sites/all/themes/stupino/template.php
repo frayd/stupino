@@ -1,14 +1,4 @@
 <?php
-// $Id: template.php,v 1.1 2010/08/31 13:54:07 stocker Exp $
-
-/*
- * @file
- * aCoffee Theme
- * by Template-Stock.com
- * v.2010
- * http://template-stock.com
- */
-
 /**
  * Initialize theme settings.
  */
@@ -44,7 +34,7 @@ if (is_null(theme_get_setting('acoffee_rss_ico'))) {
 /**
  * theme_node_submitted
  */
-function acoffee_node_submitted($node) {
+function stupino_node_submitted($node) {
   return t('Written by !username',
     array(
       '!username' => theme('username', $node),
@@ -54,7 +44,7 @@ function acoffee_node_submitted($node) {
 /**
  * theme_comment_submitted
  */
-function acoffee_comment_submitted($comment) {
+function stupino_comment_submitted($comment) {
   return t('Written by !username on @datetime.',
     array(
       '!username' => theme('username', $comment),
@@ -65,23 +55,23 @@ function acoffee_comment_submitted($comment) {
 /**
  * theme_feed_icon()
  */
-function acoffee_feed_icon($url, $title) {
+function stupino_feed_icon($url, $title) {
   return '';  
 }
 
 /**
  * Implementation of theme_preprocess_page().
  */
-function acoffee_preprocess_page(&$variables) {
+function stupino_preprocess_page(&$variables) {
   $icons = '';
 
   if (theme_get_setting('acoffee_rss_ico') == 1) {
-    $icons .= l(theme('image', drupal_get_path('theme', 'acoffee') . '/img/acoffee_rss.png', t('RSS Feed'), t('RSS Feed')), 'rss.xml', array('html' => TRUE));
+    $icons .= l(theme('image', drupal_get_path('theme', 'stupino') . '/img/acoffee_rss.png', t('RSS Feed'), t('RSS Feed')), 'rss.xml', array('html' => TRUE));
   }
 
   $twit = theme_get_setting('acoffee_twitter_ico');
   if ($twit != '') {
-    $icons .= l(theme('image', drupal_get_path('theme', 'acoffee') . '/img/acoffee_twitter.png', t('Twitter'), t('Twitter')), 'http://twitter.com/'. check_plain($twit), array('html' => TRUE));
+    $icons .= l(theme('image', drupal_get_path('theme', 'stupino') . '/img/acoffee_twitter.png', t('Twitter'), t('Twitter')), 'http://twitter.com/'. check_plain($twit), array('html' => TRUE));
   }
   
   $variables['rss_twit'] = $icons;
@@ -90,7 +80,7 @@ function acoffee_preprocess_page(&$variables) {
 /**
  * Implementation of theme_preprocess_node().
  */
-function acoffee_preprocess_node(&$variables) {
+function stupino_preprocess_node(&$variables) {
   $node_date = 
     '<div class="create-d">'. date('d', $variables['node']->created) .'</div>'.
     '<div class="create-m">'. date('M', $variables['node']->created) .'</div>'.
@@ -101,7 +91,7 @@ function acoffee_preprocess_node(&$variables) {
 /**
  * Implementation of theme_preprocess_block().
  */
-function acoffee_preprocess_block(&$variables) {
+function stupino_preprocess_block(&$variables) {
   if (!in_array($variables['block']->region,
     array(
       'topright',

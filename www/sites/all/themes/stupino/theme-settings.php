@@ -1,10 +1,5 @@
 ﻿<?php
 /**
- * @file
- * Stupino Theme Settings
- */
-
-/**
 * Implementation of THEMEHOOK_settings() function.
 *
 * @param $saved_settings
@@ -12,7 +7,7 @@
 * @return
 *   array A form array.
 */
-function acoffee_settings($saved_settings) {
+function stupino_settings($saved_settings) {
   /*
    * The default values for the theme variables. Make sure $defaults exactly
    * matches the $defaults in the template.php file.
