@@ -1,14 +1,4 @@
-﻿/* $Id: style.css,v 1.2 2010/09/12 13:29:28 stocker Exp $ */
-
-/**
- * @file
- * Styles for Stupino theme, for Drupal 6.x
- *
- * Stupino Drupal Theme
- * http://www.stupino.com
-*/
-
-html, body {
+﻿html, body {
   margin: 0;
   padding: 0;
 }
@@ -248,36 +238,48 @@ ul.secondary-links li:hover a{
   background: transparent url('img/box_green_foot.png') no-repeat bottom center;
   padding: 0 0 16px 0;
 }
+
+#sidebar-right .block {
+	color: #FFF;
+	font-size: 0.85em;
+}
 #sidebar-right .block h2 {
-  border-bottom: 3px solid #7CA500;
-  color: #FFF;
-  display: block;
-  font-family: "Lucida", "Lucida Grande", "Trebuchet MS", "Tahoma", "Verdana", sans-serif;
-  font-size: 1.2em;
-  font-weight: bold;
-  list-style-type: none;
-  margin: 0;
-  padding: 4px 15px;
-  background-color: #658600;
-  text-align: left;
-  text-transform: uppercase;
+	border-bottom: 3px solid #7CA500;
+	font-family: "Lucida", "Lucida Grande", "Trebuchet MS", "Tahoma", "Verdana", sans-serif;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin: 0;
+	padding: 4px 15px;
+	background-color: #658600;
+	text-transform: uppercase;
 }
 #sidebar-right .block .content {
-  background-image: url("img/bg.png");
-  border: 6px solid #658600;
-  padding: 15px;
+	background-image:url("img/bg.png");
+	border:6px solid #658600;
+	padding:15px;
 }
-#sidebar-right .block-user .content {
-  background-image: url("img/bg.png");
-  border: 6px solid #658600;
+#sidebar-right .block ul {
+	padding-left:10px;
+	margin:0;
 }
-#sidebar-right .block-user h2 {
-  border-bottom: 3px solid #7CA500;
-  background-color: #658600;
+#sidebar-right .block ul li {
+	padding:0;
+	margin:0;
+	list-style-image:none;
+	list-style-type:circle;
 }
-#sidebar-right .block li a {
-  color: #FFF;
+#sidebar-right .block a {color:#FFF;}
+#sidebar-right .block .more-link a {font-weight:bold;}
+#sidebar-right .block-user a {
+	padding:2px 0;
+	display:block;
+	text-decoration:none;
 }
+#sidebar-right .block-user a:hover,#sidebar-right .block-user a.active {
+	background-color:#FFF;
+	color:#658600;
+}
+
 #breadcrumb {
   color: #ADB498;
   font-size: 0.8em;
@@ -292,33 +294,6 @@ ul.secondary-links li:hover a{
 }
 ul.menu li {
   margin: 0;
-}
-#sidebar-right .block ul {
-  padding: 0 0 0.25em 14px;
-}
-#sidebar-right .block ul.menu li a {
-  display: block;
-  padding: 2px 4px;
-  width: 90%;
-}
-#sidebar-right .block ul.menu li a:hover {
-  text-decoration: none;
-}
-#sidebar-right .block ul.menu li {
-  padding: 0;
-}
-#sidebar-right .block ul.menu a:hover,
-#sidebar-right .block ul.menu li a.active {
-  background-color: #FFF;
-  color: #658600;
-}
-#sidebar-right .block {
-  color: #FFF;
-  font-size: 0.85em;
-}
-#sidebar-right .block ul li {
-  list-style-image: none;
-  list-style-type: circle;
 }
 #footer {
   color: #CCC;
@@ -349,10 +324,6 @@ input.form-submit {
 }
 .container-inline #edit-search-block-form-1-wrapper label {
   display: none;
-}
-#sidebar-right .more-link a {
-  color: #FFF;
-  font-weight: bold;
 }
 .node {
   margin: 0 0 0 0;
