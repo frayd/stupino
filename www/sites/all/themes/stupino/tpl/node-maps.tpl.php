@@ -1,29 +1,10 @@
-﻿<div id="node-<?php print $node->nid; ?>" class="node<?php if ($sticky) { print ' sticky'; } ?><?php if (!$status) { print ' node-unpublished'; } ?> clear-block">
-<?php if ($node->type != 'page'): ?>
-<div class="node-create">
-  <?php if ($node_create_date) { print $node_create_date; } ?>
-</div>
-<?php endif; ?>
-<div class="node-main">
-  <p>Хуууууууйййй!</p>
-  <?php print $picture ?>
-
-  <?php if (!$page): ?>
-    <h2><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title ?></a></h2>
-  <?php endif; ?>
-
-  <div class="meta">
-  <?php if ($submitted): ?>
-    <span class="submitted"><?php print $submitted ?></span>
-  <?php endif; ?>
+﻿<div>
+  <div id="maps">
+  <a href="http://stupino/map/node">Карта материалов</a><br><br>
+  <a href="http://stupino/map/node"><img class="maps-img" src="/sites/default/files/pictures/maps1.png"></a><br><br>
   </div>
-
-  <div class="content">
-    <?php print $content ?>
+  <div id="maps">
+  <a href="http://stupino/map/user">Карта пользователей</a><br><br>
+  <a href="http://stupino/map/user"><img class="maps-img" src="/sites/default/files/pictures/maps2.png"></a>
   </div>
-  <?php print $links; ?>
-  <?php if ($terms): ?>
-    <div class="terms"><?php print $terms ?></div>
-  <?php endif;?>
-</div>
 </div>
