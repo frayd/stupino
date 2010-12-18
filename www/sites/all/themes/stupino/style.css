@@ -226,8 +226,8 @@ ul.secondary-links li:hover a{
   margin: 10px 14px 10px 0;
 }
 .loginza-form .loginza-provider-icon-wrapper img {
-  margin-left: 6px;
-  border: 2px dashed #99ff99;
+  margin-left: 9px;
+  border: 0px dashed #99ff99;
 }
 #main-block {
   background: transparent url('img/box_green_top.png') no-repeat 0 0;
@@ -633,9 +633,14 @@ tr.even {
 }
 #maps {
   background: transparent url('img/decor.png') no-repeat top center;
-  padding: 50px 0 10px 0;
+  padding: 25px 0 10px 0;
   text-align: center;
-  font-size: 16pt;
+  font-size: 15pt;
+}
+#gallery {
+  margin-top: 10px;
+  height: 600px;
+  border: 2px solid #AFE800;
 }
 .in-maintenance #content-content {
   margin: 40px 0 30px 70px;

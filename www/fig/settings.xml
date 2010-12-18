@@ -1,0 +1,12 @@
+<settings>
+	<urlToFig>http://stupino/fig</urlToFig>
+	<thumbWidth>100</thumbWidth>
+	<thumbHeight>100</thumbHeight>
+	<thumbBorder>1</thumbBorder>
+	<thumbPad>10</thumbPad>
+	<fontSize>12</fontSize>
+	<fontFace>Arial</fontFace>
+	<navText>Navigation</navText>
+	<theme>white</theme>
+	<removeNav>false</removeNav>
+</settings>
