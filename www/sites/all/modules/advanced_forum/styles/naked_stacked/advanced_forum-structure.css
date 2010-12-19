@@ -168,11 +168,15 @@ ul.forum-links {
 
 /* Header at the top of each topic/thread */
 .forum-topic-header {
-  margin: 10px 0 2px 0;
+    background-color: #F3F781;
+    padding-top:5px;
+	padding-left:5px;
+	font-size: 12px;
 }
 
 .forum-topic-header .forum-links {
-  float: left;
+    float: left;
+    list-style-type: none;
 }
 
 .forum-topic-header .reply-count {
@@ -181,7 +185,7 @@ ul.forum-links {
 
 /* Individual forum post */
 .forum-post {
-  margin: 0 0 5px 0;
+    background-color: #F3F781;
 }
 
 .forum-post-wrapper {
@@ -191,8 +195,11 @@ ul.forum-links {
 /* Header at the top of each post */
 /* Note: Changes from Naked in this section */
 .post-info {
-  height:100%;
-  clear: both;
+    background-color: #F4FA58;
+    border: 1px solid;
+    ~clear: both;
+    font-size: 12px;
+    ~height: 100%;
 }
 
 .posted-on {
@@ -216,7 +223,11 @@ ul.forum-links {
 /* Author information pane */
 /* Note: more CSS in the author pane css file */
 .forum-post-panel-sub {
-  line-height: 110%;
+    background-color: #FFF755;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    float: left;
+    width: 100px;
 }
 
 .forum-post-panel-sub .author-pane {
@@ -255,7 +266,8 @@ ul.forum-links {
 /* Note: Changes from Naked in this section */
 
 .forum-post-wrapper .forum-post-panel-main {
-  clear: both;
+    float: left;
+    width: 544px;
 }
 
 .forum-post-panel-main .content {
@@ -269,8 +281,13 @@ ul.forum-links {
 
 /* Post footer */
 .forum-post-footer {
-  margin-top: 0;
-  clear: both;
+    background-color: #F4FA58;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    clear: both;
+    font-size: 12px;
+    margin-top: 0;
 }
 
 .forum-jump-links {

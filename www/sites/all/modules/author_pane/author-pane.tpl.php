@@ -89,7 +89,7 @@
         <?php print $picture; ?>
       <?php endif; ?>
 
-      <?php /* Online status */ ?>
+      <!-- <?php /* Online status */ ?>
       <?php if (!empty($online_status)): ?>
         <div class="author-pane-line <?php print $online_status_class ?>">
            <?php print $online_status; ?>
@@ -143,7 +143,7 @@
         <div class="author-pane-line author-points">
           <span class="author-pane-label"><?php print t('!Points', userpoints_translation()); ?></span>: <?php print $userpoints_points; ?>
         </div>
-      <?php endif; ?>
+      <?php endif; ?> -->
     </div>
 
     <?php /* Contact section */ ?>
