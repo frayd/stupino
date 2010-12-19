@@ -1,0 +1,37 @@
+BODY {FONT-FAMILY: Verdana}
+
+a, a:visited {text-decoration: underline; color: #000000;}
+a:hover, a:active {text-decoration: underline; color: #FF9C00;}
+
+A.menu {COLOR: #666666; TEXT-DECORATION: none}
+A.menu:hover {COLOR: #009900; TEXT-DECORATION: none}
+
+/* Здесь ниже задаётся стиль для ссылок - все ссылки в квадратиках обведённых нежным оттенком основного цвета */
+a {font-family: Verdana; font-size:12px; padding-top:2px;padding-bottom:2px;
+text-decoration: underline; border: 1px #FF8040 solid; background: #FFE7CE; padding:1px 4px 1px 4px; margin: 5px 0 0 0;
+ -moz-border-radius: 4px;
+ -khtml-border-radius: 4px;
+ -webkit-border-radius: 4px;
+ border-radius: 4px;}
+
+SELECT {BACKGROUND: #ffffff; FONT: 13px Verdana,Arial,Helvetica,sans-serif}
+INPUT {BORDER-RIGHT: #FF8040 1px solid; BORDER-TOP: #FF8040 1px solid; PADDING-LEFT: 2px; BACKGROUND: #ffffff; PADDING-BOTTOM: 2px; FONT: 13px Verdana,Arial,Helvetica,sans-serif; BORDER-LEFT: #FF8040 1px solid; BORDER-BOTTOM: #FF8040 1px solid}
+TEXTAREA {BORDER-RIGHT: #FF8040 1px solid; BORDER-TOP: #FF8040 1px solid; PADDING-LEFT: 2px; BACKGROUND: #ffffff; PADDING-BOTTOM: 2px; FONT: 13px Verdana,Arial,Helvetica,sans-serif; BORDER-LEFT: #FF8040 1px solid; BORDER-BOTTOM: #FF8040 1px solid}
+
+.maxiinput {WIDTH: 300px; color: 000000; border: #808080 1 solid;}
+.maininput {WIDTH: 130px; color: 000000; border: #808080 1 solid;}
+.miniinput {WIDTH: 50px; color: 000000; border: #808080 1 solid;}
+
+.toptable {FONT-SIZE: 9px; background: #FF9B04}
+
+.small {FONT-SIZE: 11px;}
+
+TD {FONT-SIZE: 11px}
+TD.menu {FONT-SIZE: 11px; FONT-WEIGHT: bold}
+TD.main {FONT-SIZE: 13px; FONT-WEIGHT: bold}
+
+TABLE.bakfon {background: #FFCD95}
+TR.vip {background: #FFF5DD}
+TR.row1 {background: #FFFFFF}
+TR.row2 {background: #FFF5DD}
+

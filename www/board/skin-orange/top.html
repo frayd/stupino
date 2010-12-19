@@ -1,0 +1,52 @@
+﻿<HTML>
+<HEAD>
+<TITLE><? print"$rubrika .:. $brdname "; ?></TITLE>
+
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Language" content="ru">
+<meta name="Resource-type" content="document">
+<meta name="document-state" content="dynamic">
+<meta name="Robots" content="index,follow">
+<META content="<? print"$brdname, $brdmaintext, $rubrika"; ?>" name=Keywords>
+<META content="На доске бесплатных объявлений объявления публикуются бесплатно. Имеется быстрый и удобный поиск. Срок размещения от 7 до 90 дней." name=Description>
+<link rel="alternate" type="application/rss+xml"title="Свежие объявления доски" href="rss.php">
+<LINK href="<?=$brdskin?>/style.css" rel=stylesheet type=text/css>
+
+<!-- НЕ УДАЛЯЙТЕ JAVA-скрипт ниже. Он НУЖЕН для подсветки рубрик и объявлений -->
+<SCRIPT language=javascript>
+function tover(q) {q.children.tags('a')[0].style.color = "#33FF00";}
+function trtover(q) {q.style.backgroundColor='#E8FFDD';}
+
+function tout(q) {q.children.tags('a')[0].style.color = "#000000";}
+function trtout(q) {q.style.backgroundColor = '#FFFFFF';}
+
+function vipover(q) {q.style.backgroundColor='#DFFFDD';}
+function vipout(q) {q.style.backgroundColor ='#DFFFDD';}
+
+function LmUp(path) {location.href = path;}
+</SCRIPT>
+</HEAD>
+
+<BODY text=#000000 bottomMargin=0 vLink=#000000 aLink=#000000 link=#000000 leftMargin=0 topMargin=0 rightMargin=0 marginheight="0" marginwidth="0">
+
+<TABLE cellSpacing=0 cellPadding=0 width="100%"><TR>
+ <TD width="350"><A href="index.php"><IMG src="<?=$brdskin?>/logo.gif" width=350 height=100 border=0 alt="<? print"$brdname - $brdmaintext"; ?>"></A></TD>
+ <TD valign=bottom class=menu background="<?=$brdskin?>/topline.gif"><div align=right><h4><?=$brdmaintext?></h4><BR><BR></div>
+  <a class=menu href="add.php">Добавить объявление</A> | 
+  <a class=menu href="index.php">разделы</A> | 
+  <a class=menu href="tools.php?event=about">Правила размещения</A>
+ </TD>
+</TR></TABLE>
+
+<TABLE cellPadding=0 cellSpacing=0 width="100%">
+<TR><TD bgColor=#cccccc height=3><IMG height=3 border=0 src="<?=$brdskin?>/blank.gif"></TD></TR>
+<TR><TD bgColor=#eeeeee height=2><IMG height=2 border=0 src="<?=$brdskin?>/blank.gif"></TD></TR>
+<TR><TD bgColor=#eeeeee style="FONT-SIZE: 11px">
+
+<TABLE width=100% cellPadding=0 cellSpacing=0>
+<TR height=21>
+<TD width=20% bgColor=#eeeeee style="FONT-SIZE: 11px">&nbsp;&nbsp;&nbsp;<a href='tools.php'>Поиск</a></TD>
+
+<!-- КОНЕЦ шапки-шаблона-->
