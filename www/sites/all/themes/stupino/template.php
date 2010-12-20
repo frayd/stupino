@@ -77,27 +77,10 @@ function stupino_preprocess_page(&$variables) {
   $variables['rss_twit'] = $icons;
 }
 
-/**
- * Implementation of theme_preprocess_node().
- */
 function stupino_preprocess_node(&$variables) {
   $node_date = 
     '<div class="create-d">'. date('d', $variables['node']->created) .'</div>'.
     '<div class="create-m">'. date('M', $variables['node']->created) .'</div>'.
     '<div class="create-y">'. date('Y', $variables['node']->created) .'</div>';
   $variables['node_create_date'] = $node_date;
-}
-
-/**
- * Implementation of theme_preprocess_block().
- */
-function stupino_preprocess_block(&$variables) {
-  if (!in_array($variables['block']->region,
-    array(
-      'topright',
-      'right',
-    )
-  )) {
-    $variables['template_files'][] = 'block-clear';
-  }
 }
