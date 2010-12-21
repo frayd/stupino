@@ -76,10 +76,10 @@ if ($dt[1]=="R" and $i>0) {$record[$i].='</TD></TR></TABLE><br>@endtable@';}
 if ($dt[1]=="R") {
 $record[$i].="<TABLE cellSpacing=0 cellPadding=0 width=200 border=0>
 <TR>
-<TD><IMG src='$brdskin/$imagefile.png' border=0></TD>
+<TD class='icons'><IMG src='$brdskin/$imagefile.png' border=0></TD>
 </TR>
 <tr>
-<TD width=200 valign=middle><h4><B><a href='index.php?id=$fid&R'>$dt[2]</a> [$rubitogo]</B></h4></TD>
+<TD width=200 valign=middle><h4><B><a href='index.php?id=$fid&R' class='aboard'>$dt[2]</a> [$rubitogo]</B></h4></TD>
 </tr>
 <TR><TD colspan=3>
 ";
@@ -198,10 +198,13 @@ $url="index.php?id=$dt[0]";
 if ($dt[1]=="R") $cm++;
 
 if ($dt[1]=="R" and $dt[0]==$fid) { $flag++; $si++;
-print"<TABLE cellSpacing=0 cellPadding=0 width=250 border=0><TR>
-<TD><IMG src='$brdskin/$cm.gif' border=0></TD>
+print"<TABLE cellSpacing=0 cellPadding=0 width=250 border=0 align='center'>
+<tr>
+<TD class='icons'><IMG src='$brdskin/$cm.png' border=0></TD>
+</tr>
+<tr>
 <TD width=200 valign=middle><h4><B>$dt[2]</B></h4></TD>
-</TR><TR><TD colspan=3><TABLE cellSpacing=0 cellPadding=0 width=100% border=0>"; }
+</tr><TR><TD colspan=3><TABLE cellSpacing=0 cellPadding=0 width=100% border=0>"; }
 
 if ($dt[1]!="R" and $flag==1) $it=$dt[2]+$dt[3];
 

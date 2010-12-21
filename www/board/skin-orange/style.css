@@ -4,7 +4,8 @@ body {
 }
 
 .header-tab {
-  width: 80%;
+  width: 100%;
+  padding-right: 30px;
 }
 .logo {
   background: url('logo.png') no-repeat center right;
@@ -13,6 +14,7 @@ body {
 }
 .line-header {
   background: url('topline.png') repeat-x center;
+  width: 44%;
 }
 .line-header-right {
   background: url('topline_right.png') no-repeat center left;
@@ -33,7 +35,9 @@ body {
   width: 800px;
   height: 40px;
 }
-
+.icons {
+  padding-bottom: 10px;
+}
 a, a:visited {text-decoration: underline; color: #000000;}
 a:hover, a:active {text-decoration: underline; color: #FF9C00;}
 
@@ -41,12 +45,33 @@ A.menu {COLOR: #666666; TEXT-DECORATION: none}
 A.menu:hover {COLOR: #009900; TEXT-DECORATION: none}
 
 /* Здесь ниже задаётся стиль для ссылок - все ссылки в квадратиках обведённых нежным оттенком основного цвета */
-a {font-family: Verdana; font-size:12px; padding-top:2px;padding-bottom:2px;
-text-decoration: underline; border: 1px #FF8040 solid; background: #FFE7CE; padding:1px 4px 1px 4px; margin: 5px 0 0 0;
+.aboard {
+  font-family: Verdana; 
+  font-size:12px; 
+  padding-top:2px;
+  padding-bottom:2px;
+  text-decoration: underline; 
+  border: 1px #FF8040 solid; 
+  background: #FFE7CE;
+  padding:1px 4px 1px 4px;
+  margin: 5px 0 0 0;
  -moz-border-radius: 4px;
  -khtml-border-radius: 4px;
  -webkit-border-radius: 4px;
- border-radius: 4px;}
+  border-radius: 4px;
+}
+.tab {
+  position: relative;
+  left: 14%;
+  border: 1px #FF8040 solid; 
+  background: #FFE7CE;
+  padding:1px 4px 1px 4px;
+  margin: 10px 0 0 0;
+ -moz-border-radius: 4px;
+ -khtml-border-radius: 4px;
+ -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
 
 SELECT {BACKGROUND: #ffffff; FONT: 13px Verdana,Arial,Helvetica,sans-serif}
 INPUT {BORDER-RIGHT: #FF8040 1px solid; BORDER-TOP: #FF8040 1px solid; PADDING-LEFT: 2px; BACKGROUND: #ffffff; PADDING-BOTTOM: 2px; FONT: 13px Verdana,Arial,Helvetica,sans-serif; BORDER-LEFT: #FF8040 1px solid; BORDER-BOTTOM: #FF8040 1px solid}
