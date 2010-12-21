@@ -590,29 +590,6 @@ tr.even {
   text-align: center;
   text-transform: uppercase;
 }
-#content-boxes {
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 20px 0 0 0;
-  width: 646px;
-}
-#content-boxes .area-l,
-#content-boxes .area-r {
-  float: left;
-  padding: 0 10px;
-  width: 303px;
-}
-#footer-boxes {
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 10px 0;
-  width: 986px;
-}
-#footer-boxes .area {
-  float: left;
-  padding: 0 6px;
-  width: 316px;
-}
 .block-clear h2 {
   background-color: transparent;
 }

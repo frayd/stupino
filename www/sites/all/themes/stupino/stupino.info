@@ -8,14 +8,5 @@ regions[right] = Right sidebar
 regions[content] = Content
 regions[header] = Header
 regions[footer] = Footer
-
 regions[topcontent] = Top Content
-regions[precontent] = Pre Content
-regions[contentleftbox] = Content Left Box
-regions[contentrightbox] = Content Right Box
-
 regions[topright] = Top Right
-
-regions[footerboxleft] = Footer Left Box
-regions[footerboxcenter] = Footer Center Box
-regions[footerboxright] = Footer Right Box
