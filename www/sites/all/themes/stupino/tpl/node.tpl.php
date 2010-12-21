@@ -20,7 +20,9 @@
 		<div class="content">
 			<?php print $content ?>
 		</div>
+
 		<?php print $links; ?>
+
 		<?php if ($terms): ?>
 		<div class="terms"><?php print $terms ?></div>
 		<?php endif;?>
