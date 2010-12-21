@@ -41,14 +41,11 @@ function stupino_node_submitted($node) {
     ));
 }
 
-/**
- * theme_comment_submitted
- */
 function stupino_comment_submitted($comment) {
-  return t('Written by !username on @datetime.',
+  return t('!username, @datetime',
     array(
       '!username' => theme('username', $comment),
-      '@datetime' => format_date($comment->timestamp)
+      '@datetime' => format_date($comment->timestamp, 'small')
     ));
 }
 
