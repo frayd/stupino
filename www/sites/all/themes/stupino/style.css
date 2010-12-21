@@ -542,7 +542,7 @@ tr.even {
   border: none;
 }
 #forum {
-  margin: 0 10px 14px 20px;
+  margin: 0 10px 14px 0;
 }
 #forum ul.links {
   margin: 0 0 0 44px;
@@ -631,7 +631,7 @@ tr.even {
   border-left-style: dotted;
   border-left-width: 2px;
 }
-#maps {
+.maps {
   background: transparent url('img/decor.png') no-repeat top center;
   padding: 25px 0 10px 0;
   text-align: center;
