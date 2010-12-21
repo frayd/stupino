@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
 * Implementation of THEMEHOOK_settings() function.
 *
@@ -35,7 +35,5 @@ function stupino_settings($saved_settings) {
     '#description' => t('Enter your twitter account name. E.g. <em>templatestock</em>. '.
       'Leave blank to remove the twitter icon.'),
   );
-
-  // Return the additional form widgets
   return $form;
 }

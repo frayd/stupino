@@ -1,4 +1,4 @@
-﻿<div id="node-<?php print $node->nid; ?>" class="node<?php if ($sticky) { print ' sticky'; } ?><?php if (!$status) { print ' node-unpublished'; } ?> clear-block">
+<div id="node-<?php print $node->nid; ?>" class="node<?php if ($sticky) { print ' sticky'; } ?><?php if (!$status) { print ' node-unpublished'; } ?> clear-block">
 
 	<?php if ($node->type != 'page'): ?>
 	<div class="node-create"><?php if ($node_create_date) { print $node_create_date; } ?></div>
@@ -20,9 +20,7 @@
 		<div class="content">
 			<?php print $content ?>
 		</div>
-		
 		<?php print $links; ?>
-		
 		<?php if ($terms): ?>
 		<div class="terms"><?php print $terms ?></div>
 		<?php endif;?>
