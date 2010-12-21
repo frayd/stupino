@@ -631,7 +631,7 @@ tr.even {
   border-left-style: dotted;
   border-left-width: 2px;
 }
-#maps {
+.maps {
   background: transparent url('img/decor.png') no-repeat top center;
   padding: 25px 0 10px 0;
   text-align: center;

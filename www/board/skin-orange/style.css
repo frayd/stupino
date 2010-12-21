@@ -1,4 +1,38 @@
-BODY {FONT-FAMILY: Verdana}
+body {
+  FONT-FAMILY: Verdana;
+  background: #d9ce42 url('topbg.png') repeat-x top left;
+}
+
+.header-tab {
+  width: 80%;
+}
+.logo {
+  background: url('logo.png') no-repeat center right;
+  width: 350px;
+  height: 115px;
+}
+.line-header {
+  background: url('topline.png') repeat-x center;
+}
+.line-header-right {
+  background: url('topline_right.png') no-repeat center left;
+  width: 20px;
+}
+#board {
+  padding: 0 10px 0 110px;
+  background: url('bgnode.png') repeat-y top left;
+}
+.board-top {
+  margin-top: 20px;
+  background: url('toper.png') no-repeat bottom left;
+  width: 800px;
+  height: 40px;
+}
+.board-bottom {
+  background: url('footer.png') no-repeat top left;
+  width: 800px;
+  height: 40px;
+}
 
 a, a:visited {text-decoration: underline; color: #000000;}
 a:hover, a:active {text-decoration: underline; color: #FF9C00;}
