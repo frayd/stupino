@@ -1,4 +1,4 @@
-﻿html, body {
+html, body {
   margin: 0;
   padding: 0;
 }
@@ -422,35 +422,34 @@ div.error {
   border: none;
   border-left: 4px solid #EB0101;
 }
+
+#comments {
+	margin: 0 0 0 70px;
+}
 .comments-header {
-  color: #658600;
-  font-family: "Trebuchet MS", sans-serif;
-  font-size: 14px;
-  border-top-color: #aa4800;
-  border-top-style: dotted;
-  border-top-width: 1px;
-  padding-top: 5px;
-}
-#comments, .box {
-  margin: 0 0 0 70px;
-}
-.box {
-  border-top: 1px dotted #AA4800;
+	border-top: 1px dotted #AA4800;
+	color: #658600;
+	padding-top: 5px;
 }
 .comment {
-  border-top: 1px dotted #AA4800;
-  margin: 0 0 20px 0;
-  background-color: #ffefd5;
+	background-color: #F0F0F0;
+	margin-bottom: 10px;
 }
 .comment .submitted {
-  margin: 8px 0 0 0;
+	background-color: #DCDCDC;
+	font-size: 12px;
+	padding: 10px 0 5px 10px;
 }
 .comment .content {
-  margin: 10px 0;
+	margin: 10px;
 }
 .comment .links {
-  border-left: 4px solid #AA4800;
+	margin: 0 0 10px 10px;
+	border-left: 4px solid #AA4800;
+	font-size: 12px;
+	padding-left: 5px;
 }
+
 /*.indented { /ответ на комментарий/
   background-color: #f5deb3;
 }*/
@@ -590,29 +589,6 @@ tr.even {
   text-align: center;
   text-transform: uppercase;
 }
-#content-boxes {
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 20px 0 0 0;
-  width: 646px;
-}
-#content-boxes .area-l,
-#content-boxes .area-r {
-  float: left;
-  padding: 0 10px;
-  width: 303px;
-}
-#footer-boxes {
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 10px 0;
-  width: 986px;
-}
-#footer-boxes .area {
-  float: left;
-  padding: 0 6px;
-  width: 316px;
-}
 .block-clear h2 {
   background-color: transparent;
 }
@@ -633,7 +609,7 @@ tr.even {
 }
 .maps {
   background: transparent url('img/decor.png') no-repeat top center;
-  padding: 25px 0 10px 0;
+  padding: 25px 0;
   text-align: center;
   font-size: 15pt;
 }

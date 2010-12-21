@@ -31,9 +31,6 @@ if (is_null(theme_get_setting('acoffee_rss_ico'))) {
   theme_get_setting('', TRUE);
 }
 
-/**
- * theme_node_submitted
- */
 function stupino_node_submitted($node) {
   return t('Written by !username',
     array(
@@ -41,27 +38,18 @@ function stupino_node_submitted($node) {
     ));
 }
 
-/**
- * theme_comment_submitted
- */
 function stupino_comment_submitted($comment) {
-  return t('Written by !username on @datetime.',
+  return t('!username, @datetime',
     array(
       '!username' => theme('username', $comment),
-      '@datetime' => format_date($comment->timestamp)
+      '@datetime' => format_date($comment->timestamp, 'small')
     ));
 }
 
-/**
- * theme_feed_icon()
- */
 function stupino_feed_icon($url, $title) {
   return '';  
 }
 
-/**
- * Implementation of theme_preprocess_page().
- */
 function stupino_preprocess_page(&$variables) {
   $icons = '';
 
