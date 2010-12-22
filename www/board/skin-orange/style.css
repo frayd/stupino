@@ -38,6 +38,10 @@ body {
 .icons {
   padding-bottom: 10px;
 }
+.copyright {
+  font-size: 10px;
+  text-align: center;
+}
 a, a:visited {text-decoration: underline; color: #000000;}
 a:hover, a:active {text-decoration: underline; color: #FF9C00;}
 

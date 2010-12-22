@@ -26,12 +26,15 @@ floats. For colors and borders, see advanced_forum.css.
 
 ul.forum-links {
   margin: 0;
-  padding: 0;
+  padding-top: 8px;
+}
+ul.forum-links li {
+  margin: 0;
 }
 
 .forum-links li {
-  margin: 0;
-  padding: 0pt 15px 0pt 0pt;
+  margin-left: -30px;
+  padding: 0 0 10px 0;
 }
 
 /*** FORUM & TOPIC LIST ******************************************************/
@@ -169,9 +172,11 @@ ul.forum-links {
 /* Header at the top of each topic/thread */
 .forum-topic-header {
     background-color: #F3F781;
-    padding-top:5px;
-	padding-left:5px;
+    padding-top: 5px;
+	padding-left: 5px;
 	font-size: 12px;
+	border: 1px solid #666666;
+	border-bottom: 2px dashed #666666;
 }
 
 .forum-topic-header .forum-links {
@@ -180,12 +185,16 @@ ul.forum-links {
 }
 
 .forum-topic-header .reply-count {
-  float: right;
+	float: right;
+	padding-right: 4px;
 }
+
 
 /* Individual forum post */
 .forum-post {
     background-color: #F3F781;
+    border-left: 1px solid #666666;
+    border-right: 1px solid #666666;
 }
 
 .forum-post-wrapper {
@@ -196,10 +205,11 @@ ul.forum-links {
 /* Note: Changes from Naked in this section */
 .post-info {
     background-color: #F4FA58;
-    border: 1px solid;
-    ~clear: both;
+    border-bottom: 2px dashed #666666;
+	~clear: both;
     font-size: 12px;
     ~height: 100%;
+	padding: 3px 0 3px 0;
 }
 
 .posted-on {
@@ -224,8 +234,7 @@ ul.forum-links {
 /* Note: more CSS in the author pane css file */
 .forum-post-panel-sub {
     background-color: #FFF755;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    border-right: 2px dashed #666666;
     float: left;
     width: 100px;
 }
@@ -267,11 +276,12 @@ ul.forum-links {
 
 .forum-post-wrapper .forum-post-panel-main {
     float: left;
-    width: 544px;
+    width: 542px;
 }
 
 .forum-post-panel-main .content {
   padding: 5px;
+  color: #333333;
 }
 
 /* Signature */
@@ -282,19 +292,17 @@ ul.forum-links {
 /* Post footer */
 .forum-post-footer {
     background-color: #F4FA58;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    border-top: 1px solid black;
+    border-top: 2px dashed #666666;
+    border-bottom: 1px solid #666666;
     clear: both;
     font-size: 12px;
-    margin-top: 0;
 }
 
 .forum-jump-links {
-  float: left;
-  line-height: 2em;
-  padding: 0px 5px;  
-  width: 140px;
+	float: left;
+	line-height: 2em;
+	padding-left: 4px;
+	width: 140px;
 }
 
 .forum-post-links {

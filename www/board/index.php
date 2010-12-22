@@ -650,5 +650,5 @@ if (is_file("$brdskin/bottom.html")) include "$brdskin/bottom.html";
 
 ?>
 
-<center><small>Powered by <a href="http://www.wr-script.ru" title="Скрипт доски объявлений" class="copyright">WR-Board</a> &copy; 1.6 Lite <br></small></font></center>
+<p class="copyright">Powered by <a href="http://www.wr-script.ru" title="Скрипт доски объявлений">WR-Board</a> &copy; 1.6 Lite</p>
 </body></html>
