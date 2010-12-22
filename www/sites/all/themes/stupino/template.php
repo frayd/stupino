@@ -32,7 +32,7 @@ if (is_null(theme_get_setting('acoffee_rss_ico'))) {
 }
 
 function stupino_node_submitted($node) {
-  return t('Written by !username',
+  return t('Автор: !username',
     array(
       '!username' => theme('username', $node),
     ));

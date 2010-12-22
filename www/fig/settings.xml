@@ -6,7 +6,7 @@
 	<thumbPad>10</thumbPad>
 	<fontSize>12</fontSize>
 	<fontFace>Arial</fontFace>
-	<navText>Navigation</navText>
+	<navText>Навигация</navText>
 	<theme>white</theme>
 	<removeNav>false</removeNav>
 </settings>

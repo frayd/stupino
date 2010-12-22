@@ -2,7 +2,7 @@
 require_once("config.php");
 
 //creates xml data for navigation structure of fig
-echo '<root name="Home" path="' . $data_folder . '">' . chr(13);
+echo '<root name="Галерея" path="' . $data_folder . '">' . chr(13);
 
 getDirectory("$data_folder");
 
