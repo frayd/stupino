@@ -224,10 +224,15 @@ ul.secondary-links li:hover a{
 }
 .loginza-form {
   margin: 10px 14px 10px 0;
+
 }
 .loginza-form .loginza-provider-icon-wrapper img {
-  margin-left: 9px;
+  margin-left: 6px;
   border: 0px dashed #99ff99;
+  vertical-align: middle;
+}
+.loginza-form .loginza-login {
+  padding-left: 6px;
 }
 #main-block {
   background: transparent url('img/box_green_top.png') no-repeat 0 0;
@@ -456,7 +461,7 @@ div.error {
 .new {
   color: #FF6C00;
 }
-.node img {
+.node .content img {
   border: 2px solid #7CA500;
   float: right;
   margin: 0 0 10px 10px;

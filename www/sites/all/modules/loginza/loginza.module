@@ -38,7 +38,7 @@ function loginza_form_alter(&$form, &$form_state, $form_id) {
       $link =  urlencode($link);
       $links = array();
       $links[] = array(
-        'data' => l(t('Login via OpenId'), 'https://loginza.ru/api/widget?token_url=' . $link, array('absolute' => TRUE, 'attributes' => array('class' => 'loginza'))),
+        'data' => l(t('Войти с помощью OpenId'), 'https://loginza.ru/api/widget?token_url=' . $link, array('absolute' => TRUE, 'attributes' => array('class' => 'loginza'))),
       );
 	    $form['loginza'] = array(
 	      '#value' => theme('item_list', $links),
@@ -48,7 +48,7 @@ function loginza_form_alter(&$form, &$form_state, $form_id) {
   elseif ($form_id == 'user_login') {
     global $user;
     if (isset($user->loginza)) {
-      drupal_set_message(t('%username, you have already signed up using %provider. You can !register to get full functionality',
+      drupal_set_message(t('%username, вы уже вошли с помощью %provider. Вы можете !register для получения полной функциональности.',
             array(
               '%username' => $user->name,
               '%provider' => current(array_keys(loginza_get_identity_name($user->loginza['identity']))),
@@ -60,7 +60,7 @@ function loginza_form_alter(&$form, &$form_state, $form_id) {
       $link =  urlencode($link);
       $link = l(theme('loginza_icon'),'https://loginza.ru/api/widget?token_url=' . $link, array('absolute' => TRUE, 'html' => TRUE, 'attributes' => array('class' => 'loginza')));
       $form['loginza'] = array(
-        '#value' => '<div class="loginza-form"><b>' . t('Login using:') . ' </b>'
+        '#value' => '<div class="loginza-form"><b>' . t('Войти используя:') . ' </b>'
           . $link  . '</div>',
       );
     }
@@ -157,9 +157,9 @@ function theme_loginza_icon($icon = NULL) {
     $providers = array_unique($providers);
     foreach ($providers as $provider => $img) {
       $output .= '<span class="loginza-provider-icon-wrapper">' . theme('image', $dir . $img, 
-      t('Login via !provider', array(
+      t('Войти с помощью !provider', array(
                               '!provider' => $provider)),
-      t('Login via !provider', array(
+      t('Войти с помощью !provider', array(
                               '!provider' => $provider)),
       array('class' => 'loginza-provider-icon')
       ) . '</span>';
@@ -169,9 +169,9 @@ function theme_loginza_icon($icon = NULL) {
     $img = $providers[$icon];
     $provider = $icon;
     $output .= '<span class="loginza-provider-icon-wrapper">' . theme('image', $dir . $img, 
-      t('Login via !provider', array(
+      t('Войти с помощью !provider', array(
                               '!provider' => $provider)),
-      t('Login via !provider', array(
+      t('Войти с помощью !provider', array(
                               '!provider' => $provider)),
       array('class' => 'loginza-provider-icon')
       ) . '</span>';
@@ -191,7 +191,7 @@ function loginza_preprocess_block(&$variables) {
    $loginza = $GLOBALS['user']->loginza ? $GLOBALS['user']->loginza : NULL;
    if (!empty($loginza)) {
      $provider = current(array_keys(loginza_get_identity_name($loginza['identity'])));
-     $provider = t('Logged in via !provider', array('!provider' => $provider));
+     $provider = t('Вы вошли с помощью !provider', array('!provider' => $provider));
      $info = "
        <div class='loginza-info'>
          <em>$provider</em>
@@ -227,7 +227,7 @@ function phptemplate_comment_post_forbidden($node) {
       if (!$user->loginza) {
         $link = url('loginza', array('absolute' => TRUE, 'query' => array('destination' => $_GET['q'])));
         $link =  urlencode($link);
-        $loginza = '<div class="loginza-form"><b>' . t('Login using:') . ' </b>
+        $loginza = '<div class="loginza-form"><b>' . t('Войти используя:') . ' </b>
             <a href="https://loginza.ru/api/widget?token_url=' . $link . '" class="loginza">' . 
           theme('loginza_icon') . '</a></div>';
       }
@@ -302,9 +302,9 @@ function loginza_preprocess_user_picture(&$variables) {
   if (($loginza = $account->loginza) && $account->loginza['photo']) {
      $path = $loginza['photo'];
      $url = (url($path) == $path) ? $path : (base_path() . $path);
-     $photo = '<img src="'. check_url($url) .'" alt="'. t('View user profile.') .'" title="'. t('View user profile.') .'" />';
+     $photo = '<img src="'. check_url($url) .'" alt="'. t('Посмотреть профиль пользователя.') .'" title="'. t('Посмотреть профиль пользователя.') .'" />';
      $profile = $loginza['identity'];
-     $attributes = array('attributes' => array('title' => t('View user profile.')), 'html' => TRUE, 'absolute' => TRUE);
+     $attributes = array('attributes' => array('title' => t('Посмотреть профиль пользователя.')), 'html' => TRUE, 'absolute' => TRUE);
      $variables['picture'] = l($photo, $profile, $attributes);
      if (variable_get('loginza_picture_icon', FALSE)) {
       $variables['picture'] .= loginza_get_provider_ico($loginza['identity']);
