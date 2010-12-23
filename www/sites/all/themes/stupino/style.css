@@ -627,3 +627,4 @@ tr.even {
   margin: 40px 0 30px 70px;
 }
 .not-logged-in #comments .comment .links {display:none;}
+.not-logged-in #content-content .node .links .comment_forbidden {display:none;}
