@@ -32,7 +32,6 @@
 					<div id="content-content" class="clear-block">
 						<?php print $content; ?>
 					</div>
-					<?php print $feed_icons; ?>
 				</div>
 			</div>
 			<div id="footer-bg"></div>
