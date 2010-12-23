@@ -79,7 +79,7 @@ $record[$i].="<TABLE cellSpacing=0 cellPadding=0 width=200 border=0>
 <TD class='icons'><IMG src='$brdskin/$imagefile.png' border=0></TD>
 </TR>
 <tr>
-<TD width=200 valign=middle><h4><B><a href='index.php?id=$fid&R' class='aboard'>$dt[2]</a> [$rubitogo]</B></h4></TD>
+<TD width=200 valign=middle><h4 class='rub-title'><B>$dt[2] [$rubitogo]</B></h4></TD>
 </tr>
 <TR><TD colspan=3>
 ";
@@ -175,7 +175,7 @@ $in--;
 
 
 
-
+/*
 
 // СТРАНИЦА с объявлениями текущей рубрики(Левел 0+1)
 if (isset($_GET['id']) and (strlen($_GET['id'])<=3) and isset($_GET['R'])) { $fid=$_GET['id'];
@@ -285,7 +285,7 @@ print"</tr></table><center>Всего объявлений в рубрике: <B>$itogo</B></center><BR
 }
 
 
-
+*/
 
 
 
@@ -398,7 +398,7 @@ if (!isset($_GET['page'])) {$page=1;} else {$page=$_GET['page']; if (!ctype_digi
 
 $ivip=0; $itogos=0;
 
-print"<TABLE class=bakfon cellPadding=2 cellSpacing=1 width=98% align=center><TBODY>
+print"<TABLE class='bakfon' cellPadding=2 cellSpacing=1 align=center><TBODY>
 <TR class=row1 height=28><TD colspan=6 class=main align=center><strong>$razdel</strong> <small>--></small> <strong>$rubrika</strong><br>";
 
 if (is_file("$datadir/reklama.html")) include"$datadir/reklama.html";

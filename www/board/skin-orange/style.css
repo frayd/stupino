@@ -41,6 +41,12 @@ body {
 .copyright {
   font-size: 10px;
   text-align: center;
+  margin-bottom: 7px;
+}
+.rub-title {
+  color: #444444;
+  font-size: 12px; 
+  padding-bottom: 5px;
 }
 a, a:visited {text-decoration: underline; color: #000000;}
 a:hover, a:active {text-decoration: underline; color: #FF9C00;}
@@ -93,7 +99,11 @@ TD {FONT-SIZE: 11px}
 TD.menu {FONT-SIZE: 11px; FONT-WEIGHT: bold}
 TD.main {FONT-SIZE: 13px; FONT-WEIGHT: bold}
 
-TABLE.bakfon {background: #FFCD95}
+TABLE.bakfon {
+  background: #FFCD95;
+  width: 800px;
+  margin: 20px 0;
+}
 TR.vip {background: #FFF5DD}
 TR.row1 {background: #FFFFFF}
 TR.row2 {background: #FFF5DD}

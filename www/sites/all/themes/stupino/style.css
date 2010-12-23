@@ -224,7 +224,6 @@ ul.secondary-links li:hover a{
 }
 .loginza-form {
   margin: 10px 14px 10px 0;
-
 }
 .loginza-form .loginza-provider-icon-wrapper img {
   margin-left: 6px;
@@ -617,6 +616,9 @@ tr.even {
   padding: 25px 0;
   text-align: center;
   font-size: 15pt;
+}
+.maps img {
+  padding-left: 15px;
 }
 #gallery {
   margin-top: 10px;
