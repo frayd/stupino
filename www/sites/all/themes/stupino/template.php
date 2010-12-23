@@ -11,7 +11,7 @@ function stupino_comment_submitted($comment) {
 }
 
 function stupino_preprocess_page(&$variables) {
-  $variables['rss_twit'] = l(theme('image', drupal_get_path('theme', 'stupino') . '/img/acoffee_rss.png', t('RSS Feed'), t('RSS Feed')), 'rss.xml', array('html' => TRUE));;
+  $variables['rss_twit'] = l(theme('image', drupal_get_path('theme', 'stupino') . '/img/acoffee_rss.png', t('RSS Feed'), t('RSS Feed')), 'rss.xml', array('html' => TRUE));
 }
 
 function stupino_preprocess_node(&$variables) {

@@ -626,5 +626,8 @@ tr.even {
 .in-maintenance #content-content {
   margin: 40px 0 30px 70px;
 }
-.not-logged-in #comments .comment .links {display:none;}
-.not-logged-in #content-content .node .links .comment_forbidden {display:none;}
+/* Скрытие многочисленых приглашений залогиниться на сайте.
+ В дальнейшем желательно не создавать их на стороне сервера. */
+.not-logged-in #comments .comment .links {display:none;} /* в коментариях */
+.not-logged-in #content-content .node .links .comment_forbidden {display:none;} /* на главной */
+.not-logged-in #content-content .forum-post .forum-post-links {display:none;} /* на форуме */
